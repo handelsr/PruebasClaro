@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const FormInput = ({size, type="text", label, id, valor="", onChange }) => {
+export const FormInput = ({ form, handleChange }) => {
+  const { size, type = "text", label, id, value = "" } =  form;
   return (
     <div className={`col-${size}`}>
         <label 
@@ -14,8 +15,8 @@ export const FormInput = ({size, type="text", label, id, valor="", onChange }) =
             type={type}
             className="form-control" 
             id={id} 
-            value={valor} 
-            onChange={onChange}
+            value={value} 
+            onChange={handleChange}
         />
     </div>
   )

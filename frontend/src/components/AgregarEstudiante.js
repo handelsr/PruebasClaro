@@ -3,6 +3,9 @@ import { Form } from './Form'
 import { FormInputs } from '../data/FormInputs'
 
 export const AgregarEstudiante = () => {
+    const handleClick = () => {
+        
+    }
   return (
     <div>
         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -13,14 +16,11 @@ export const AgregarEstudiante = () => {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-                {
-                    
-                }
                 <Form FormInputs={FormInputs}/>
             </div>
             <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" className="btn btn-primary">Guardar</button>
+                <button type="button" className="btn btn-primary" onClick={handleClick}>Guardar</button>
             </div>
             </div>
         </div>

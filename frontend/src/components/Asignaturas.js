@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Table } from './Table'
 import { HeadCellsAsignaturas } from '../data/HeadCellsAsignaturas'
 import { HeadCellsEstudiantes } from '../data/HeadCellsEstudiantes'
@@ -6,18 +6,24 @@ import { HeadCellsEstudiantes } from '../data/HeadCellsEstudiantes'
 export const Asignaturas = () => {
 
   const [showEstudiantes, setshowEstudiantes] = useState(false)
+  const [asignaturas, setAsignaturas] = useState([])
 
-  const asignaturas = async () => {
-    const url='http://localhost:64585/api/ObtenerAsignaturas'
+  const getAsignaturas = async () => {
+    const url='http://localhost:64585/Asignaturas'
     const fetchAsignaturas = await fetch(url)
     const asignaturas = await fetchAsignaturas.json()
 
     const BodyRowsAsignaturas = asignaturas.map((asignatura) => {
-      return asignatura.values()
+      return asignatura.Estado && [asignatura.Nombre]
+      // return Object.values(asignatura.filter(el => el.Estado && el.Nombre))
     })
 
-    return BodyRowsAsignaturas
+    setAsignaturas(BodyRowsAsignaturas);
   }
+  
+  useEffect(() => {
+    getAsignaturas()
+  },[])
 
   return (
     <div className="row">

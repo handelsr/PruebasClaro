@@ -1,5 +1,4 @@
 export const HeadCellsEstudiantes = [
-    'Asignatura', 
-    'Nota', 
-    'Nota Final'
+    'Nombre',
+    "Calificacion"
 ];

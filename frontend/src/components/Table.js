@@ -10,12 +10,14 @@ export const Table = ({ HeadCells, BodyRows, setshowEstudiantes }) => {
                 <TableHeadRow cells={HeadCells}/>
             </thead>
             <tbody>
-                {
-                    BodyRows.map((cells, index) => {
+                  {   
+                    BodyRows.length > 0 ?
+                    BodyRows?.map((cells, index) => {
                         return (
                             <TableBodyRow cells={cells} key={index} setshowEstudiantes={setshowEstudiantes}/>
                         )
                     })
+                    : null
                 }
             </tbody>
         </table>

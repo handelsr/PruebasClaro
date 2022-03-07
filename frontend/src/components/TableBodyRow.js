@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const TableBodyRow = ({ cells, setshowEstudiantes }) => {
+export const TableBodyRow = ({ cells=[], setshowEstudiantes }) => {
 
   const handleClick = ({target}) => {
     setshowEstudiantes(true);

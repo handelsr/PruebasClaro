@@ -1,0 +1,74 @@
+{
+  "Estudiantes": [
+    {
+      "EstudianteId": 1,
+      "Nombre": "Juan",
+      "Apellido": "Perez",
+      "Direccion": "Calle falsa 123",
+      "Latitud": -34.6037,
+      "Longitud": -58.3816,
+      "Estado": true
+    },
+    {
+      "EstudianteId": 1,
+      "Nombre": "Juan",
+      "Apellido": "Perez",
+      "Direccion": "Calle falsa 123",
+      "Latitud": -34.6037,
+      "Longitud": -58.3816,
+      "Estado": false
+    }
+  ],
+  "Asignaturas": [
+    {
+      "Nombre": "Matematicas",
+      "Estado": true
+    },
+    {
+      "Nombre": "Lengua",
+      "Estado": true
+    },
+    {
+      "Nombre": "Fisica",
+      "Estado": true
+    }
+  ],
+  "AsignaturaEstudiante":[
+    {
+      "AsignaturaId": 1,
+      "EstudianteId": 1,
+      "Calificacion": 10,
+      "Estado": true
+    },
+    {
+      "AsignaturaId": 2,
+      "EstudianteId": 1,
+      "Calificacion": 10,
+      "Estado": true
+    },
+    {
+      "AsignaturaId": 3,
+      "EstudianteId": 1,
+      "Calificacion": 10,
+      "Estado": true
+    },
+    {
+      "AsignaturaId": 1,
+      "EstudianteId": 2,
+      "Calificacion": 10,
+      "Estado": true
+    },
+    {
+      "AsignaturaId": 2,
+      "EstudianteId": 2,
+      "Calificacion": 10,
+      "Estado": true
+    },
+    {
+      "AsignaturaId": 3,
+      "EstudianteId": 2,
+      "Calificacion": 10,
+      "Estado": true
+    }
+  ]
+}
